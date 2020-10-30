@@ -147,10 +147,10 @@ p {
   font-size: 12px;
 }
 
-.container {
+/* .container {
   max-width: 120rem;
   margin: 0 auto;
-}
+} */
 
 /* Alignment */
 
@@ -373,11 +373,11 @@ textarea {
 }
 
 .bg-pink {
-  background-color: #ed1556;
+  background-color: #ed1556!important;
 }
 
 .bg-blue {
-  background-color: #2b93d1;
+  background-color: #2b93d1!important;
 }
 
 .d-inline { 
@@ -709,7 +709,7 @@ textarea {
  */
 
  .banner {
-  background-image:  linear-gradient(to right, #ed1556 50%, #2b93d1 50%);
+  background-image:  linear-gradient(to right, #ed1556 60%, #2b93d1 40%);
  }
 
  .banner-wrapper {
@@ -718,9 +718,7 @@ textarea {
 
  .banner-left {
   background-color: #ed1556;
-  position: relative;
-  -ms-flex-preferred-size: 67%;
-  flex-basis: 67%;
+  height: 60rem;
 }
 
 .btn-banner {
@@ -741,19 +739,13 @@ textarea {
 }
 
 .banner-right {
-  position: relative;
-  -ms-flex-preferred-size: 33%;
-  flex-basis: 33%;
   height: auto;
 }
 
 .banner-form {
-  position: absolute;
-  right: -30px;
-  top: 45px;
-  max-width: 500px;
-  text-align: center;
-  padding: 10px;
+  padding: 60px 10px 41px 0;
+ max-width: 350px;
+ margin: 0 auto;
 }
 
 .pattern-banner {
@@ -762,11 +754,13 @@ textarea {
     z-index: 3;
 }
 
-.banner-left .banner-img {
+.banner-img {
   position: absolute;
-  bottom: 0;
   left: -200px;
   z-index: 4;
+  bottom: 0;
+  /* margin-top: -230px;
+  margin-left: -200px; */
 }
 
 .map {
@@ -777,11 +771,13 @@ textarea {
 .pattern-map-top {
   top: 50px;
   left: 130px;
+  z-index: 2;
 }
 
 .pattern-map-bot {
-  bottom: -11%;
-  right: -155px;
+ top: 630px;
+  right: -85px;
+  z-index: 2;
 }
 
 .map-title {
@@ -800,19 +796,18 @@ textarea {
   right: 13px;
   width: 590px;
   height: 580px;
-  z-index: -1;
+  z-index: 1;
   margin-left: -34px;
 }
 
 .blue-shadow {
-  position: absolute;
-  top: 25px;
-  right: -35px;
+  float: right;
+  margin-right: -36px;
+  margin-top: 33px;
   width: 590px;
   height: 580px;
   background-color: #2b93d1;
-  z-index: -1;
-  margin-left: -34px;
+  
 }
 
 .map-iframe {
@@ -830,7 +825,8 @@ textarea {
 .lady-offer-action {
   height: 714px;
   padding: 120px 50px 50px 50px;
-  position: relative;
+  position: absolute;
+  z-index: 99999;
 }
 
 .lady-offer-action button {
@@ -841,25 +837,23 @@ textarea {
 }
 
 .pink-shadow {
-  position: absolute;
-  top: -25px;
-  right: -98px;
+  float: right;
+  margin-right: -56px;
+  margin-top: -24px;
   width: 590px;
-  height: 600px;
+  height: 580px;
   background-color: #ed1556;
-  z-index: -1;
   
 }
 
 .pink-shadow-lady {
   position: absolute;
-  top: -25px;
-  left: -98px;
   width: 590px;
-  height: 600px;
+  height: 580px;
   background-color: #ed1556;
   z-index: -1;
-  
+  top: -24px;
+  left: -75px;
 }
 
 .pattern-lady-top {
@@ -868,9 +862,9 @@ textarea {
 }
 
 .pattern-lady-bot {
-  z-index: -1;
-  left: 265px;
-  bottom: 120px;
+  z-index: 11;
+  right: -70px;
+  bottom: -10px;
 }
 
 .model  {
@@ -895,13 +889,13 @@ textarea {
 
 
 .blue-shadow-custom {
+  z-index: -1;
   position: absolute;
   top: 25px;
   right: 4%;
   width: 590px;
   height: 480px;
   background-color: #2b93d1;
-  z-index: -1;
 }
 
 
@@ -1022,84 +1016,37 @@ article:after {
  * ===================================================================
  */
 
- @media screen and (max-width: 1150px) {
+ @media screen and (max-width: 1200px) {
   html {
-      font-size: 62%;
+      font-size: 62%!important;
+  }
+  .banner-img {
+    left: -150px;
   }
 }
 @media screen and (max-width: 1050px) {
   html {
-      font-size: 8px;
+      font-size: 8px!important;
   }
+
+  /* .flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse
+  } */
+  
 }
 @media screen and (max-width: 850px) {
   html {
-      font-size: 7px;
-  }
-  .flex--33, .flx--50, .flex--67 {
-   
-  }
-
-  .d-flex {
-    display: block;
+      font-size: 7px!important;
   }
 }
 
 @media screen and (max-width: 420px) {
   html {
-      font-size: 45%;
+      font-size: 45%!important;
   }
 }
 
-@media only screen and (max-width: 900px) and (min-width: 375px) {
-
-
-  .nav-bar {
-    justify-content: space-evenly;
-  }
-
-  .nav-contact {
-    margin-top: 0;
-    letter-spacing: 2px;
-    width: 40%;
-    height: 5rem;
-  }
-
-  .mt-1-sm {
-    margin-top: 40px;
-  }
-
-  h1, .h1-text-deco {
-    font-size: 40px;
-    text-align: center!important;
-  }
-
-  .banner-wrapper {
-    flex-direction: column;
-  }
-
-  .banner-right {
-    order: 1;
-    flex: 1 0 100%;
-  }
-
-  .banner-form {
-    right:0;
-    margin: 0 auto;
-    position: unset;
-  }
-
-
-  .banner-left {
-    order: 2;
-    flex: 2 0 100%;
-  }
-
-  .banner-image {
-    left:0;
-    margin: 0 auto;
-    position: unset;
-  }
 
  /* ===================================================================
  * 9.0 :: Font
